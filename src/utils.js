@@ -1,4 +1,4 @@
-export function Nums2CardString(x) {
+function Nums2CardString(x) {
   switch (x) {
     case 12:
 	return "A";
@@ -14,7 +14,7 @@ export function Nums2CardString(x) {
     }
 }
 
-export function CardString2Num(s) {
+function CardString2Num(s) {
   switch (s) {
     case "A":
       return 12;
@@ -30,7 +30,7 @@ export function CardString2Num(s) {
 }
 
 //takes specific card (incl. suit) and returns string rep
-export function GetSingleString(suit,num) {
+function GetSingleString(suit,num) {
   let labelString = "";
   switch (suit) {
     case 0:
@@ -51,7 +51,7 @@ export function GetSingleString(suit,num) {
 }
 
 //takes two card nums w/o suits and returns string rep
-export function GetPairString(i,j) {
+function GetPairString(i,j) {
   let labelString = "";
   if (i>j)
   {
@@ -65,4 +65,11 @@ export function GetPairString(i,j) {
   }
   labelString=Nums2CardString(i)+Nums2CardString(j)+labelString;
   return labelString;
+}
+
+module.exports = {
+  Nums2CardString: Nums2CardString,
+  CardString2Num: CardString2Num,
+  GetPairString: GetPairString,
+  GetSingleString: GetSingleString
 }

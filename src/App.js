@@ -1,9 +1,10 @@
 
 
 import React, { Component } from 'react';
-import { GetPairString, GetSingleString, Nums2CardString } from './utils.js';
 import logo from './logo.svg';
 import './App.css';
+
+var { GetPairString, GetSingleString, Nums2CardString } =  require('./utils.js');
 //import 'EquityCalc';
 
 
